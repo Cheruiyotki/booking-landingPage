@@ -1,16 +1,114 @@
-# React + Vite
+# Travel Concierge
+LuxeScapesKE - Travel Concierge Landing Page
+A high-conversion, modern landing page built for a Kenyan Travel Concierge / Middleman business model.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Current Status: MVP (Minimum Viable Product) Live Demo: [Insert your Vercel/Netlify link here]
 
-Currently, two official plugins are available:
+📖 Project Overview
+This project is a React-based frontend application designed to market "Staycation Packages" and "Travel Experiences" rather than just accommodation listings.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Unlike standard booking sites (Airbnb/Booking.com), this site is designed without a search bar. The Goal: Funnel traffic directly to WhatsApp/DM to allow the agent (Middleman) to curate the experience, verify the property, and add a service markup.
 
-## React Compiler
+⚡ Tech Stack
+Frontend Library: React (Vite recommended)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Styling: Tailwind CSS (Utility-first styling)
 
-## Expanding the ESLint configuration
+Icons: Lucide-react (Lightweight, clean icons)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Language: JavaScript (ES6+) / JSX
+
+🚀 Getting Started
+Prerequisites
+Ensure you have Node.js installed on your machine.
+
+Installation
+Clone the repository
+
+Bash
+
+git clone https://github.com/yourusername/luxescapes-ke.git
+cd luxescapes-ke
+Install dependencies
+
+Bash
+
+npm install
+# or
+yarn install
+Install Tailwind CSS (if setting up from scratch)
+
+Bash
+
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+Install Icons
+
+Bash
+
+npm install lucide-react
+Run the development server
+
+Bash
+
+npm run dev
+📂 Project Structure
+/src
+  ├── components/
+  │   └── LandingPage.jsx    # Main Landing Page Component
+  ├── assets/                # Images (Add your Kenyan location photos here)
+  ├── App.jsx                # Root Component
+  └── main.jsx               # Entry Point
+🛠️ Customization Guide
+1. Changing the Content (Packages)
+Go to LandingPage.jsx and locate the packages array. Update the JSON data to reflect your real inventory:
+
+JavaScript
+
+const packages = [
+  {
+    id: 1,
+    title: "Nanyuki Container House",  // Change Title
+    price: "KES 12,000",               // Change Price
+    image: "/path/to/image.jpg",       // Local or URL image
+    features: ["Mt Kenya View", "BBQ Kit"]
+  },
+  // ...
+];
+2. Configuring WhatsApp Integration
+Locate the "Chat on WhatsApp" button in the Footer section and update the href with your number and a pre-filled message:
+
+JavaScript
+
+<a href="https://wa.me/254712345678?text=Hi,%20I%20am%20interested%20in%20a%20package">
+  Chat on WhatsApp
+</a>
+3. Images
+For the best visual appeal, use high-resolution images (1920x1080 for Hero, 400x300 for Cards).
+
+Hero Image: Located in the style={{ backgroundImage: ... }} inline style in the Hero Section.
+
+Card Images: Defined in the packages array.
+
+🧠 Strategic Design Decisions
+No Search Bar: Prevents users from "shopping around" and bypassing the agent. It forces them to interact with the brand for recommendations.
+
+"Packages" vs "Listings": We list features like "Rose Petals" and "Private Chef" to justify the markup/commission fee, distinguishing the service from a standard Airbnb host.
+
+Mobile First: The navigation and card layout are optimized for mobile screens, where 90% of Kenyan social media traffic (TikTok/IG) originates.
+
+🚢 Deployment
+This project is optimized for deployment on Vercel or Netlify.
+
+Push code to GitHub.
+
+Import project into Vercel.
+
+Vercel will auto-detect Vite/React settings.
+
+Click Deploy.
+
+📄 License
+Distributed under the MIT License. See LICENSE for more information.
+
+Built by TechTrek
